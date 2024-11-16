@@ -6,7 +6,7 @@ import birthday_song from "../assets/Music/happy-birthday-song.mp3";
 import mute from "../assets/images/mute_icon.svg";
 
 const Birthday_wishing_Page = () => {
-  const { wish, name, image } = useContext(wish_context);
+  const { wish, name, image,setwish } = useContext(wish_context);
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   //   const reader = new FileReader()
@@ -66,6 +66,7 @@ const Birthday_wishing_Page = () => {
           : "w-1/2 h-1/2 bg-green-900 text-white text-3xl absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden "
       }
     >
+        <button className="w-20 h-20 absolute z-70 rounded-full " onClick={()=>setwish(false)}> back  </button>
       <div className="w-full h-3/5 sm:1/2 md:w-1/2 lg:w-full xl:w-full flex justify-center ">
         <img
           src={image}
