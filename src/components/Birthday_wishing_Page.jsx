@@ -6,6 +6,7 @@ import birthday_image from "../assets/images/akhila_image.jpg";
 import mute from "../assets/images/mute_icon.svg"
 
 
+
 const Birthday_wishing_Page = () => {
   const { wish, name } = useContext(wish_context);
   const audioRef = useRef(null);
